@@ -53,13 +53,8 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Inter-Bold.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Roboto-BoldItalic.ttf</string>
-		<string>Roboto-Italic.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-		<string>Roboto-MediumItalic.ttf</string>
-		<string>Roboto-Regular.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Bold.ttf</string>
 	</array>
 </dict>
 </plist>

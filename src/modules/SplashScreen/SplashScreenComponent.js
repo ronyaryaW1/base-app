@@ -1,16 +1,30 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
-import React from 'react'
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
+import Logo from '../../assets/images/White.svg';
+import React from 'react';
+import {FONTS} from '../../config/styles/Fonts';
+import {COLORS} from '../../config/styles/Colors';
+import { windowWidth } from '../../utils/Dimensions';
 
 const SplashScreenComponent = () => {
   return (
-    <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems:'center', backgroundColor: '#ffffff'}}>
-      <Text style={{fontSize: 30, fontWeight: 'bold', color: '#20315f'}}>GAMEON</Text>
-      <TouchableOpacity style={{backgroundColor: '#AD40AF', padding: 20, width: '90%', borderRadius: 5, flexDirection: 'row', justifyContent: 'space-between'}}>
-        <Text style={{fontWeight: 'bold', fontSize: 18, color: '#FFFF'}}>Let's Begin</Text>
-        <Text style={{fontWeight: 'bold', fontSize: 18, color: '#FFFF'}}>></Text>
-      </TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <Logo width={windowWidth * 0.3} height={windowWidth * 0.3} />
     </SafeAreaView>
-  )
-}
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLORS.PRIMARY_BLUE,
+  },
+});
 
-export default SplashScreenComponent
+export default SplashScreenComponent;

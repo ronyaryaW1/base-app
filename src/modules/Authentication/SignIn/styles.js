@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
-import { COLORS } from "../../../config/styles/colors";
+import { COLORS } from "../../../config/styles/Colors";
+import { FONTS } from "../../../config/styles/Fonts";
 const {width, height } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
@@ -29,25 +30,25 @@ export const styles = StyleSheet.create({
     },
     inputStyle: {borderWidth: 1, borderRadius: 10, padding: 10},
     btnContainer: {
-      width: width * 0.5,
+      width: width * 0.7,
       marginTop: 10
     },
     btn: (isValid) =>  ({
-      backgroundColor: !isValid ? 'white' : COLORS.PRIMARY,
-      paddingVertical: 10,
+      backgroundColor: !isValid ? 'white' : COLORS.PRIMARY_BLUE,
+      paddingVertical: 15,
       borderWidth: !isValid ? 1 : 0,
-      borderColor: COLORS.PRIMARY,
-      borderRadius: 10,
+      borderColor: COLORS.NEUTRAL_LIGHT,
+      borderRadius: 5,
       alignItems: 'center'
     }),
     txtBtn:(isValid) => ( {
       fontSize: 14,
-      color: !isValid ? COLORS.PRIMARY : 'white',
-      fontWeight: 'bold',
+      color: !isValid ? COLORS.NEUTRAL_GREY : 'white',
+      fontFamily: FONTS.POPPINS_BOLD,
       textAlign: 'center'
     }),
     errorText: {
-      color: COLORS.ERROR,
+      color: COLORS.PRIMARY_RED,
       fontSize: 12
     }
     

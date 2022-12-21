@@ -1,7 +1,7 @@
 import {View, Text, TextInput, Button, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {styles} from './styles';
-import {COLORS} from '../../../config/styles/colors';
+import {COLORS} from '../../../config/styles/Colors';
 import {Formik, useFormik} from 'formik';
 import * as Yup from 'yup';
 
