@@ -39,9 +39,9 @@ export interface Props {
   export default class Icons extends React.PureComponent<Props> {
     static defaultProps = {
       type: this.TYPE_ENTYPO,
-      size: 12,
+      size: 30,
       color: '#666',
-      name: 'mobile',
+      name: 'email',
       style: {},
     };
   
@@ -218,6 +218,7 @@ export interface Props {
       if (onPress == null) {
         return this.icon;
       }
+      console.log('icon', this.icon)
       return (
         <TouchableOpacity
           {...this.props}

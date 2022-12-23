@@ -24,7 +24,7 @@ const SigninComponent = (props) => {
       <Text style={styles.title}>Futsal Kigs</Text>
       <Text style={styles.subtitle}>Ayo Main Bareng !</Text>
       <Formik
-        initialValues={{username: '', password: ''}}
+        initialValues={{email: '', password: ''}}
         validationSchema={SignInSchema}
         onSubmit={values => console.log(values)}>
         {({
@@ -37,25 +37,26 @@ const SigninComponent = (props) => {
         }) => (
           <>
             <View style={styles.formContainer}>
+
               <View style={styles.form}>
                 <TextInput
                   style={styles.inputStyle}
-                  placeholder="username"
-                  onChangeText={handleChange('username')}
-                  onBlur={handleBlur('username')}
-                  value={values.username}
+                  placeholder="Your Email"
+                  onChangeText={handleChange('email')}
+                  onBlur={handleBlur('email')}
+                  value={values.email}
                 />
-                {errors.username && (
-                  <Text style={styles.errorText}>{errors.username}</Text>
+                {errors.email && (
+                  <Text style={styles.errorText}>{errors.email}</Text>
                 )}
               </View>
               <View style={{marginBottom: 15}}>
                 <TextInput
                   style={styles.inputStyle}
-                  placeholder="password"
+                  placeholder="Password"
                   onBlur={handleBlur('password')}
                   value={values.password}
-                  onChangeText={handleChange('password')}
+                  onChangeText={handleChange('Password')}
                 />
                 {errors.password && (
                   <Text style={styles.errorText}>{errors.password}</Text>

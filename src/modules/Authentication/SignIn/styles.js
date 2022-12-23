@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     },
     formContainer: {
       width: '80%',
-      marginTop: 35
+      marginTop: 25
     },
     form: {
       marginVertical: 15
