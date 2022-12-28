@@ -81,7 +81,6 @@ export interface Props {
         type,
         containerStyle,
       } = this.props;
-      console.log('type', type)
     
       switch (type) {
         default:
@@ -218,7 +217,6 @@ export interface Props {
       if (onPress == null) {
         return this.icon;
       }
-      console.log('icon', this.icon)
       return (
         <TouchableOpacity
           {...this.props}
