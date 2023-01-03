@@ -23,7 +23,7 @@ const SignInComponent = ({navigation}) => {
       <Text style={styles.subtitle}>Sign in to continue</Text>
       <View style={styles.formContainer}>
         {/* form */}
-        <FormAuth type="SignIn" />
+        <FormAuth type="SignIn" navigation={navigation} />
         {/* Login Options */}
         <View style={styles.strokeContainer}>
           <View style={styles.stroke} />

@@ -4,7 +4,7 @@ import Form from './smallComponent/Form';
 import {COLORS} from '../config/styles/Colors';
 import Button from './smallComponent/Button';
 
-const FormAuth = ({type}) => {
+const FormAuth = ({type, navigation}) => {
   // form state
   const [fullName, onChangeFullName] = React.useState(null);
   const [email, onChangeEmail] = React.useState(null);
@@ -32,6 +32,10 @@ const FormAuth = ({type}) => {
       setPassErr(true);
     } else if (password === defPassword) {
       setPassErr(false);
+    }
+
+    if(email === defEmail && password === defPassword){
+      navigation.navigate('dashboard')
     }
   };
 

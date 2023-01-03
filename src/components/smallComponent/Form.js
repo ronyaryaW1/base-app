@@ -9,6 +9,7 @@ const Form = props => {
     title, // placeholder
     iconName, // icon name
     typeIcon, // icon type
+    iconSize = 25, // icon size
     value, // value 
     onChangeValue, // onchnage value
     customIconColor, // color for icon
@@ -16,9 +17,10 @@ const Form = props => {
     isErrorValue = false, // triger value dosn't match
     errMsg = '', // error message if value dosn't match
     secureTextEntry,
+    customStyles,
   } = props;
 
-  const [borderColor, setBorderColor] = useState(COLORS.NEUTRAL_GREY)
+  const [borderColor, setBorderColor] = useState(null)
 
   useEffect(() => {
     if(isErrorValue === true){
@@ -32,12 +34,12 @@ const Form = props => {
   
   return (
     <View>
-      <View style={styles.form(borderColor)}>
+      <View style={customStyles || styles.form(borderColor)}>
         <Icons
           name={iconName}
           type={typeIcon}
-          color={borderColor || COLORS.NEUTRAL_GREY}
-          size={25}
+          color={ customIconColor || borderColor}
+          size={iconSize}
         />
         <TextInput
           style={styles.formTitlte}
@@ -65,10 +67,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   }),
   formTitlte: {
-    marginLeft: 8,
+    marginHorizontal: 8,
     color: COLORS.NEUTRAL_GREY,
-    paddingVertical: 15,
-    width: '100%'
+    paddingVertical: 12,
+    width: '100%',
+    fontFamily: FONTS.POPPINS_REGULAR,
+    fontSize: 12,
   },
   textError: {
     color: COLORS.PRIMARY_RED,
